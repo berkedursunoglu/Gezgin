@@ -9,12 +9,14 @@
         <entry key="..\:/Users/kofun/AndroidStudioProjects/Gezgin/app/src/main/res/drawable/profile_icon.xml" value="0.3495" />
         <entry key="..\:/Users/kofun/AndroidStudioProjects/Gezgin/app/src/main/res/drawable/profile_icon_dark.xml" value="0.3495" />
         <entry key="..\:/Users/kofun/AndroidStudioProjects/Gezgin/app/src/main/res/layout/activity_account_edit.xml" value="0.25" />
+        <entry key="..\:/Users/kofun/AndroidStudioProjects/Gezgin/app/src/main/res/layout/activity_favorite_page.xml" value="0.26015625" />
         <entry key="..\:/Users/kofun/AndroidStudioProjects/Gezgin/app/src/main/res/layout/activity_main.xml" value="0.34479166666666666" />
         <entry key="..\:/Users/kofun/AndroidStudioProjects/Gezgin/app/src/main/res/layout/activity_main_page.xml" value="0.22" />
         <entry key="..\:/Users/kofun/AndroidStudioProjects/Gezgin/app/src/main/res/layout/activity_profile.xml" value="0.33" />
         <entry key="..\:/Users/kofun/AndroidStudioProjects/Gezgin/app/src/main/res/layout/activity_register_page.xml" value="0.33" />
         <entry key="..\:/Users/kofun/AndroidStudioProjects/Gezgin/app/src/main/res/layout/activity_user_page.xml" value="0.22" />
         <entry key="..\:/Users/kofun/AndroidStudioProjects/Gezgin/app/src/main/res/layout/content_user_page.xml" value="0.34479166666666666" />
+        <entry key="..\:/Users/kofun/AndroidStudioProjects/Gezgin/app/src/main/res/layout/favorite_cardview.xml" value="0.33" />
         <entry key="..\:/Users/kofun/AndroidStudioProjects/Gezgin/app/src/main/res/layout/fragment_infopage_first.xml" value="0.20943952802359883" />
         <entry key="..\:/Users/kofun/AndroidStudioProjects/Gezgin/app/src/main/res/layout/fragment_infopage_second.xml" value="0.34479166666666666" />
         <entry key="..\:/Users/kofun/AndroidStudioProjects/Gezgin/app/src/main/res/layout/fragment_infopage_third.xml" value="0.34479166666666666" />

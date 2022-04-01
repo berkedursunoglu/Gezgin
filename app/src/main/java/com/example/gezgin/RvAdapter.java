@@ -1,6 +1,5 @@
 package com.example.gezgin;
 
-import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -48,9 +47,9 @@ public class RvAdapter extends RecyclerView.Adapter<RvAdapter.CvHolder> {
 
         public CvHolder(View view) {
             super(view);
-            placenames = view.findViewById(R.id.placenames);
-            placerates = view.findViewById(R.id.placerates);
-            placeimages = view.findViewById(R.id.placeimage);
+            placenames = view.findViewById(R.id.favoritename);
+            placerates = view.findViewById(R.id.favoriterates);
+            placeimages = view.findViewById(R.id.favoriteimage);
         }
     }
 }

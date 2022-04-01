@@ -7,4 +7,9 @@
         android:icon="@drawable/profile_icon"
         android:title="action_profile"
         app:showAsAction="always|collapseActionView" />
+    <item
+        android:id="@+id/favorite"
+        android:icon="@drawable/favorite_icon"
+        android:title="favorite"
+        app:showAsAction="always|collapseActionView" />
 </menu>

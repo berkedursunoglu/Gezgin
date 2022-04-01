@@ -2,6 +2,9 @@ package com.example.gezgin;
 
 
 
+import android.Manifest;
+import android.content.Context;
+import android.location.Location;
 import android.os.Bundle;
 
 import android.view.LayoutInflater;
@@ -11,14 +14,21 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import com.android.volley.Request;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.gezgin.databinding.PlacesFragmentBinding;
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -28,13 +38,11 @@ import java.util.ArrayList;
 public class PlacesFragment extends Fragment {
     private ArrayList<Places> placesArrayList;
     private SharedViewModel sharedViewModel;
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         PlacesFragmentBinding design;
         design = DataBindingUtil.inflate(inflater, R.layout.places_fragment, container, false);
-
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(requireActivity(), R.array.spinner_array, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         design.spinner.setAdapter(adapter);
@@ -94,36 +102,46 @@ public class PlacesFragment extends Fragment {
         return design.getRoot();
     }
 
-    public void getLocation(String location) {
-        String url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=41.0007655,28.8503406&type="+location+"&radius=3000&key=AIzaSyAWQf93dsF1xtomC2OaDpj1cMXj9dookOg";
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, url, response -> {
-            try {
-                placesArrayList = new ArrayList<>();
-                JSONObject jsonObject = new JSONObject(response);
-                JSONArray places = jsonObject.getJSONArray("results");
-                for (int i=0 ; i<places.length();i++){
-                    JSONObject place = places.getJSONObject(i);
-                    String place_name = place.getString("name");
-                    String place_rating = place.getString("rating");
-                    String place_icon = place.getString("icon");
+    public void getLocation(String location1) {
+        FusedLocationProviderClient fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(requireActivity());
+        ContextCompat.checkSelfPermission(requireActivity(), Manifest.permission.ACCESS_FINE_LOCATION);
+        Task<Location> task = fusedLocationProviderClient.getLastLocation();
+        task.addOnSuccessListener(new OnSuccessListener<Location>() {
+            @Override
+            public void onSuccess(Location location) {
+                String locations = location.getLatitude()+","+location.getLongitude();
+                String url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location="+locations+"&type="+location1+"&radius=3000&key=AIzaSyAWQf93dsF1xtomC2OaDpj1cMXj9dookOg";
+                StringRequest stringRequest = new StringRequest(Request.Method.GET, url, response -> {
+                    try {
+                        placesArrayList = new ArrayList<>();
+                        JSONObject jsonObject = new JSONObject(response);
+                        JSONArray places = jsonObject.getJSONArray("results");
+                        for (int i=0 ; i<places.length();i++){
+                            JSONObject place = places.getJSONObject(i);
+                            String place_name = place.getString("name");
+                            String place_rating = place.getString("rating");
+                            String place_icon = place.getString("icon");
 
-                    JSONObject geometry = place.getJSONObject("geometry");
-                    JSONObject location1 = geometry.getJSONObject("location");
-                    String lat = location1.getString("lat");
-                    String lng = location1.getString("lng");
+                            JSONObject geometry = place.getJSONObject("geometry");
+                            JSONObject location1 = geometry.getJSONObject("location");
+                            String lat = location1.getString("lat");
+                            String lng = location1.getString("lng");
 
-                    Places places1 = new Places(place_name,place_icon,Double.parseDouble(lat),Double.parseDouble(lng),Double.parseDouble(place_rating));
-                    placesArrayList.add(places1);
-                }
+                            Places places1 = new Places(place_name,place_icon,Double.parseDouble(lat),Double.parseDouble(lng),Double.parseDouble(place_rating));
+                            placesArrayList.add(places1);
+                        }
 
 
-            } catch (JSONException e) {
-                e.printStackTrace();
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }, error -> {
+
+                });
+                Volley.newRequestQueue(requireActivity()).add(stringRequest);
             }
-        }, error -> {
-
         });
-        Volley.newRequestQueue(requireActivity()).add(stringRequest);
+
     }
 
     @Override

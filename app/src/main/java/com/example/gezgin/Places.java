@@ -3,7 +3,7 @@ package com.example.gezgin;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-public class Places implements Parcelable {
+public class Places {
 
     private String place_name,icon;
     private Double place_lat, place_lng, place_rate;
@@ -15,38 +15,6 @@ public class Places implements Parcelable {
         this.place_lng = place_lng;
         this.place_rate = place_rate;
     }
-
-    protected Places(Parcel in) {
-        place_name = in.readString();
-        icon = in.readString();
-        if (in.readByte() == 0) {
-            place_lat = null;
-        } else {
-            place_lat = in.readDouble();
-        }
-        if (in.readByte() == 0) {
-            place_lng = null;
-        } else {
-            place_lng = in.readDouble();
-        }
-        if (in.readByte() == 0) {
-            place_rate = null;
-        } else {
-            place_rate = in.readDouble();
-        }
-    }
-
-    public static final Creator<Places> CREATOR = new Creator<Places>() {
-        @Override
-        public Places createFromParcel(Parcel in) {
-            return new Places(in);
-        }
-
-        @Override
-        public Places[] newArray(int size) {
-            return new Places[size];
-        }
-    };
 
     public String getPlace_name() {
         return place_name;
@@ -86,34 +54,5 @@ public class Places implements Parcelable {
 
     public void setPlace_rate(Double place_rate) {
         this.place_rate = place_rate;
-    }
-
-    @Override
-    public int describeContents() {
-        return 0;
-    }
-
-    @Override
-    public void writeToParcel(Parcel parcel, int i) {
-        parcel.writeString(place_name);
-        parcel.writeString(icon);
-        if (place_lat == null) {
-            parcel.writeByte((byte) 0);
-        } else {
-            parcel.writeByte((byte) 1);
-            parcel.writeDouble(place_lat);
-        }
-        if (place_lng == null) {
-            parcel.writeByte((byte) 0);
-        } else {
-            parcel.writeByte((byte) 1);
-            parcel.writeDouble(place_lng);
-        }
-        if (place_rate == null) {
-            parcel.writeByte((byte) 0);
-        } else {
-            parcel.writeByte((byte) 1);
-            parcel.writeDouble(place_rate);
-        }
     }
 }

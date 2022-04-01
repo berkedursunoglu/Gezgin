@@ -43,9 +43,15 @@ public class MainPage extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if (item.getItemId() == R.id.action_profile) {
-            startActivity(new Intent(MainPage.this, Profile.class));
-            finish();
+        switch (item.getItemId()) {
+            case R.id.action_profile:
+                startActivity(new Intent(MainPage.this, Profile.class));
+                finish();
+                break;
+            case R.id.favorite:
+                startActivity(new Intent(MainPage.this, FavoritePage.class));
+                finish();
+                break;
         }
         return true;
     }
@@ -54,5 +60,4 @@ public class MainPage extends AppCompatActivity {
         Fragment fragment = new PlacesFragment();
         getSupportFragmentManager().beginTransaction().add(R.id.fragmentcontainer, fragment).commit();
     }
-
 }
