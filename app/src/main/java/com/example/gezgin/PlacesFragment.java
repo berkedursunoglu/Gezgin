@@ -102,15 +102,15 @@ public class PlacesFragment extends Fragment {
         return design.getRoot();
     }
 
-    public void getLocation(String location1) {
+    public void getLocation(String type) {
         FusedLocationProviderClient fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(requireActivity());
         ContextCompat.checkSelfPermission(requireActivity(), Manifest.permission.ACCESS_FINE_LOCATION);
         Task<Location> task = fusedLocationProviderClient.getLastLocation();
         task.addOnSuccessListener(new OnSuccessListener<Location>() {
             @Override
             public void onSuccess(Location location) {
-                String locations = location.getLatitude()+","+location.getLongitude();
-                String url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location="+locations+"&type="+location1+"&radius=3000&key=AIzaSyAWQf93dsF1xtomC2OaDpj1cMXj9dookOg";
+                String currentlocation = location.getLatitude()+","+location.getLongitude();
+                String url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location="+currentlocation+"&type="+type+"&radius=3000&key=AIzaSyAWQf93dsF1xtomC2OaDpj1cMXj9dookOg";
                 StringRequest stringRequest = new StringRequest(Request.Method.GET, url, response -> {
                     try {
                         placesArrayList = new ArrayList<>();
@@ -130,8 +130,6 @@ public class PlacesFragment extends Fragment {
                             Places places1 = new Places(place_name,place_icon,Double.parseDouble(lat),Double.parseDouble(lng),Double.parseDouble(place_rating));
                             placesArrayList.add(places1);
                         }
-
-
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
