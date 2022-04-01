@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/kofun/AndroidStudioProjects/Gezgin/app/src/main/res/drawable/gezgin_icon.xml" value="0.3465" />
+        <entry key="..\:/Users/kofun/AndroidStudioProjects/Gezgin/app/src/main/res/drawable/next_button_icon.xml" value="0.2055" />
+        <entry key="..\:/Users/kofun/AndroidStudioProjects/Gezgin/app/src/main/res/drawable/profile_cv.xml" value="0.3495" />
+        <entry key="..\:/Users/kofun/AndroidStudioProjects/Gezgin/app/src/main/res/drawable/profile_icon.xml" value="0.3495" />
+        <entry key="..\:/Users/kofun/AndroidStudioProjects/Gezgin/app/src/main/res/drawable/profile_icon_dark.xml" value="0.3495" />
+        <entry key="..\:/Users/kofun/AndroidStudioProjects/Gezgin/app/src/main/res/layout/activity_account_edit.xml" value="0.25" />
+        <entry key="..\:/Users/kofun/AndroidStudioProjects/Gezgin/app/src/main/res/layout/activity_main.xml" value="0.34479166666666666" />
+        <entry key="..\:/Users/kofun/AndroidStudioProjects/Gezgin/app/src/main/res/layout/activity_main_page.xml" value="0.22" />
+        <entry key="..\:/Users/kofun/AndroidStudioProjects/Gezgin/app/src/main/res/layout/activity_profile.xml" value="0.33" />
+        <entry key="..\:/Users/kofun/AndroidStudioProjects/Gezgin/app/src/main/res/layout/activity_register_page.xml" value="0.33" />
+        <entry key="..\:/Users/kofun/AndroidStudioProjects/Gezgin/app/src/main/res/layout/activity_user_page.xml" value="0.22" />
+        <entry key="..\:/Users/kofun/AndroidStudioProjects/Gezgin/app/src/main/res/layout/content_user_page.xml" value="0.34479166666666666" />
+        <entry key="..\:/Users/kofun/AndroidStudioProjects/Gezgin/app/src/main/res/layout/fragment_infopage_first.xml" value="0.20943952802359883" />
+        <entry key="..\:/Users/kofun/AndroidStudioProjects/Gezgin/app/src/main/res/layout/fragment_infopage_second.xml" value="0.34479166666666666" />
+        <entry key="..\:/Users/kofun/AndroidStudioProjects/Gezgin/app/src/main/res/layout/fragment_infopage_third.xml" value="0.34479166666666666" />
+        <entry key="..\:/Users/kofun/AndroidStudioProjects/Gezgin/app/src/main/res/layout/fragment_maps.xml" value="0.34791666666666665" />
+        <entry key="..\:/Users/kofun/AndroidStudioProjects/Gezgin/app/src/main/res/layout/fragment_singin_page.xml" value="0.34479166666666666" />
+        <entry key="..\:/Users/kofun/AndroidStudioProjects/Gezgin/app/src/main/res/layout/fragment_singup_page.xml" value="0.34479166666666666" />
+        <entry key="..\:/Users/kofun/AndroidStudioProjects/Gezgin/app/src/main/res/layout/places_cardview.xml" value="0.5" />
+        <entry key="..\:/Users/kofun/AndroidStudioProjects/Gezgin/app/src/main/res/layout/places_fragment.xml" value="0.33" />
+        <entry key="..\:/Users/kofun/AndroidStudioProjects/Gezgin/app/src/main/res/layout/placesfragment.xml" value="0.346875" />
+        <entry key="..\:/Users/kofun/AndroidStudioProjects/Gezgin/app/src/main/res/layout/profile_cv.xml" value="0.33" />
+        <entry key="..\:/Users/kofun/AndroidStudioProjects/Gezgin/app/src/main/res/menu/mainpagemenu.xml" value="0.34791666666666665" />
+        <entry key="..\:/Users/kofun/Downloads/Gezgin-master/app/src/main/res/layout/activity_main.xml" value="0.2526555386949924" />
+        <entry key="..\:/Users/kofun/Downloads/Gezgin-master/app/src/main/res/layout/activity_main_page.xml" value="0.22" />
+        <entry key="..\:/Users/kofun/Downloads/Gezgin-master/app/src/main/res/layout/fragment_maps.xml" value="0.2526555386949924" />
+        <entry key="..\:/Users/kofun/Downloads/Gezgin-master/app/src/main/res/layout/fragment_singin_page.xml" value="0.2526555386949924" />
+        <entry key="..\:/Users/kofun/Downloads/Gezgin-master/app/src/main/res/layout/fragment_singup_page.xml" value="0.2526555386949924" />
+        <entry key="..\:/Users/kofun/Downloads/Gezgin-master/app/src/main/res/layout/places_cardview.xml" value="0.33" />
+        <entry key="..\:/Users/kofun/Downloads/Gezgin-master/app/src/main/res/layout/places_fragment.xml" value="0.33" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Gezgin</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_user_page">UserPage</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="kullan_c_ad">Kullanıcı Adı</string>
+    <string name="ifre">Şifre</string>
+    <string name="e_mail">E-mail</string>
+    <string name="ye_ol">Üye ol</string>
+    <string name="kay_t_ol">Kayıt ol</string>
+    <string name="giri_yap">Giriş yap</string>
+    <string name="ifre_tekrar">Şifre Tekrar:</string>
+    <string name="yeni_ifre">Yeni Şifre:</string>
+    <string name="mevcut_ifre">Mevcut Şifre:</string>
+    <string name="ifre_de_i_tir">Şifre Değiştir</string>
+    <string name="kullan_c_ad_de_i_tir">Kullanıcı Adı Değiştir</string>
+    <string name="de_i_tir">Değiştir</string>
+    <string name="kullan_c_adi">Kullanıcı Adı:</string>
+
+    <string-array name="spinner_array">
+        <item>Hastane</item>
+        <item>Cafe</item>
+        <item>Alışveriş</item>
+        <item>Devlet Kurumları</item>
+        <item>Restorant</item>
+        <item>Eczane</item>
+        <item>Spor Salonu</item>
+        <item>Banka</item>
+        <item>Atm</item>
+        <item>Benzinlik</item>
+    </string-array>
+</resources>

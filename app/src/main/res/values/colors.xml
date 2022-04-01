@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="indigo_900">#1a237e</color>
+    <color name="indigo_a700">#304ffe</color>
+    <color name="indigo_100">#8c9eff</color>
+    <color name="indigo_a200">#536dfe</color>
+    <color name="indigo_400">#5c6bc0</color>
+    <color name="indigo_800">#283593</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="background">#EAE7E7</color>
+    <color name="backgroundindigo">#B5BEF3</color>
+</resources>
