@@ -1,4 +1,4 @@
-package com.example.gezgin;
+package com.example.gezgin.MapPages;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -12,21 +12,17 @@ import androidx.lifecycle.ViewModelProvider;
 
 import android.Manifest;
 
-import android.content.Context;
-import android.content.Intent;
 import android.location.Location;
 import android.os.Bundle;
 
 
-import android.os.CountDownTimer;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.android.volley.Request;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
+import com.example.gezgin.Places;
+import com.example.gezgin.R;
+import com.example.gezgin.SharedViewModel;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -37,15 +33,8 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
-import com.google.gson.Gson;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.lang.reflect.Type;
 import java.util.ArrayList;
-import java.util.logging.Logger;
 
 
 public class MapsFragment extends Fragment {

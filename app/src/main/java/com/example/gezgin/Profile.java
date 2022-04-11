@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.gezgin.MapPages.MainPage;
 import com.example.gezgin.databinding.ActivityProfileBinding;
 import com.example.gezgin.userregister.UserPage;
 import com.google.android.material.snackbar.BaseTransientBottomBar;
@@ -61,7 +62,7 @@ public class Profile extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        startActivity(new Intent(Profile.this,MainPage.class));
+        startActivity(new Intent(Profile.this, MainPage.class));
         finish();
         super.onBackPressed();
     }

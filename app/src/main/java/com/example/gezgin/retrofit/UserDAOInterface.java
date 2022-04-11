@@ -1,6 +1,7 @@
 package com.example.gezgin.retrofit;
 
 
+import com.example.gezgin.PlacesFav;
 import com.example.gezgin.retrofit.UserResponse.CRUDResponse;
 import com.example.gezgin.retrofit.UserResponse.UsersResponse;
 
@@ -12,6 +13,18 @@ import retrofit2.http.POST;
 
 public interface UserDAOInterface {
 
+
+    @POST("gezginapp/insert_places.php")
+    @FormUrlEncoded
+    Call<CRUDResponse> set_places(@Field("places_name") String places_name, @Field("places_img") String places_img, @Field("places_rate") String places_rate,@Field("user_id") Integer user_id);
+
+    @POST("gezginapp/getfav_places.php")
+    @FormUrlEncoded
+    Call<PlacesFav> getfav_places(@Field("user_id") int user_id);
+
+    @POST("gezginapp/deletefav_places.php")
+    @FormUrlEncoded
+    Call<CRUDResponse> delete_fav(@Field("places_id") int places_id);
 
     @GET("gezginapp/all_users.php")
     Call<UsersResponse> all_user();

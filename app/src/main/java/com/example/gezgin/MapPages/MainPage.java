@@ -1,25 +1,20 @@
-package com.example.gezgin;
+package com.example.gezgin.MapPages;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 
-import android.Manifest;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.location.Location;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
+import com.example.gezgin.FavoritePage;
+import com.example.gezgin.Profile;
+import com.example.gezgin.R;
 import com.example.gezgin.databinding.ActivityMainPageBinding;
-import com.google.android.gms.location.FusedLocationProviderClient;
-import com.google.android.gms.location.LocationServices;
-import com.google.android.gms.tasks.Task;
 
 public class MainPage extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.example.gezgin;
+package com.example.gezgin.MapPages;
 
 
 
@@ -23,6 +23,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import com.android.volley.Request;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.gezgin.Places;
+import com.example.gezgin.R;
+import com.example.gezgin.RvAdapter;
+import com.example.gezgin.SharedViewModel;
 import com.example.gezgin.databinding.PlacesFragmentBinding;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
@@ -89,7 +93,7 @@ public class PlacesFragment extends Fragment {
         });
 
         design.getplacesbutton.setOnClickListener(view -> {
-            RvAdapter rvAdapter = new RvAdapter(placesArrayList);
+            RvAdapter rvAdapter = new RvAdapter(placesArrayList,requireActivity());
             design.rv.setHasFixedSize(true);
             design.rv.setLayoutManager(new LinearLayoutManager(requireActivity().getApplicationContext()));
             design.rv.setAdapter(rvAdapter);

@@ -34,7 +34,7 @@
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/fragmentcontainer"
-            android:name="com.example.gezgin.PlacesFragment"
+            android:name="com.example.gezgin.MapPages.PlacesFragment"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:contentDescription="@string/app_name"

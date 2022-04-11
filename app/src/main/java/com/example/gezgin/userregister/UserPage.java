@@ -1,20 +1,15 @@
 package com.example.gezgin.userregister;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
-import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.PagerAdapter;
-import androidx.viewpager.widget.ViewPager;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
-import com.example.gezgin.MainPage;
+import com.example.gezgin.MapPages.MainPage;
 import com.example.gezgin.R;
 import com.example.gezgin.Shared;
 import com.example.gezgin.databinding.ActivityUserPageBinding;

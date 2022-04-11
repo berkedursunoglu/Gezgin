@@ -15,6 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Gezgin"
         android:usesCleartextTraffic="true"
+        android:requestLegacyExternalStorage="true"
         tools:targetApi="m">
         <activity
             android:name=".FavoritePage"
@@ -31,7 +32,7 @@
             android:name=".Profile"
             android:exported="false" />
         <activity
-            android:name=".MainPage"
+            android:name=".MapPages.MainPage"
             android:exported="false" />
         <activity
             android:name=".userregister.UserPage"
