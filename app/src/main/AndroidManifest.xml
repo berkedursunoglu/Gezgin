@@ -23,7 +23,7 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyAWQf93dsF1xtomC2OaDpj1cMXj9dookOg" />
+            android:value="AIzaSyDseOYQmfTmwuPpHdc-sKjKVlbVnl8ilhs" />
 
         <activity
             android:name=".AccountEdit"
@@ -42,7 +42,6 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

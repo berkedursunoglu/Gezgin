@@ -41,6 +41,10 @@ public class SigninPage extends Fragment {
                 , design.password.getText().toString()
                 , design.email.getText().toString()
                 , getActivity().getApplicationContext());
+
+        design.username.setText("");
+        design.password.setText("");
+        design.email.setText("");
     }
 }
 

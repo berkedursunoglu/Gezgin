@@ -23,9 +23,8 @@ public class MainPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         ActivityMainPageBinding design = DataBindingUtil.setContentView(MainPage.this, R.layout.activity_main_page);
         setSupportActionBar(design.mainpagetoolbar);
-        placesFragment();
-        Fragment fragment = new MapsFragment();
-        getSupportFragmentManager().beginTransaction().replace(R.id.framelayoutmap, fragment).commit();
+        fragments();
+
 
     }
 
@@ -51,8 +50,10 @@ public class MainPage extends AppCompatActivity {
         return true;
     }
 
-    public void placesFragment() {
-        Fragment fragment = new PlacesFragment();
-        getSupportFragmentManager().beginTransaction().add(R.id.fragmentcontainer, fragment).commit();
+    public void fragments() {
+        Fragment fragmentmap = new MapsFragment();
+        getSupportFragmentManager().beginTransaction().replace(R.id.framelayoutmap, fragmentmap).commit();
+        Fragment fragmentplace = new PlacesFragment();
+        getSupportFragmentManager().beginTransaction().add(R.id.fragmentcontainer, fragmentplace).commit();
     }
 }

@@ -114,7 +114,7 @@ public class PlacesFragment extends Fragment {
             @Override
             public void onSuccess(Location location) {
                 String currentlocation = location.getLatitude()+","+location.getLongitude();
-                String url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location="+currentlocation+"&type="+type+"&radius=3000&key=AIzaSyAWQf93dsF1xtomC2OaDpj1cMXj9dookOg";
+                String url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location="+currentlocation+"&type="+type+"&radius=3000&key=AIzaSyDseOYQmfTmwuPpHdc-sKjKVlbVnl8ilhs";
                 StringRequest stringRequest = new StringRequest(Request.Method.GET, url, response -> {
                     try {
                         placesArrayList = new ArrayList<>();

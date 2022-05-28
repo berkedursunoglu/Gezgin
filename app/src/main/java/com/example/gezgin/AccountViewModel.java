@@ -14,6 +14,7 @@ import com.example.gezgin.retrofit.UserResponse.CRUDResponse;
 import com.example.gezgin.retrofit.UserResponse.User;
 import com.example.gezgin.retrofit.UserDAOInterface;
 import com.example.gezgin.retrofit.UserResponse.UsersResponse;
+import com.example.gezgin.userregister.SingupPage;
 
 import java.util.List;
 
@@ -121,10 +122,7 @@ public class AccountViewModel extends ViewModel {
                                     Toast.makeText(mContext, "Kayıt olma başarılı", Toast.LENGTH_SHORT).show();
                                     shared.setUsername(name);
                                     shared.setRegister(1);
-                                    Intent intent = new Intent(mContext, MainPage.class);
-                                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                                    mContext.startActivity(intent);
-                                    ((Activity) mContext).finish();
+
                                 }
                             }
 
