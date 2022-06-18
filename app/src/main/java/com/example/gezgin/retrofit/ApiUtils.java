@@ -2,8 +2,8 @@ package com.example.gezgin.retrofit;
 
 public class ApiUtils {
 
-    public static String BASE_URL = "http://www.berkedr.online/";
-    public static String BASE_URL_MAP = "https://maps.googleapis.com/";
+    public static String BASE_URL = "//";
+    public static String BASE_URL_MAP = "//";
     public static UserDAOInterface getuserDaoInterface(){
         return RetrofitClient.getClient(BASE_URL).create(UserDAOInterface.class);
     }
